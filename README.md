@@ -23,7 +23,7 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
 
 2. **Instal·la les dependències:**
 
-   pip install flask feedparser
+   pip install requeriments
 
 
 3. **Executa el servidor:**
