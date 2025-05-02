@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Vanguardia - {{ rss.feed.title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">RSS Reader</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/lavanguardia/home">Portada</a></li>
+        <li class="nav-item"><a class="nav-link" href="/lavanguardia/politica">Política</a></li>
+        <li class="nav-item"><a class="nav-link" href="/lavanguardia/deportes">Esports</a></li>
+        <li class="nav-item"><a class="nav-link" href="/lavanguardia/economia">Economia</a></li>
+        <li class="nav-item"><a class="nav-link" href="/lavanguardia/cultura">Cultura</a></li>
+      </ul>
+    </div>
+    <button id="toggleTheme" class="btn btn-outline-light">Toggle Light/Dark</button>
+  </div>
+</nav>
+<div class="container mt-4">
+  <h1>{{ rss.feed.title }}</h1>
+  {% if rss.feed.image %}
+    <a href="{{ rss.feed.link }}">
+      <img src="{{ rss.feed.image.href }}" alt="Logo" class="logo my-3">
+    </a>
+<div class="my-4 text-center">
+    <a href="{{ request.path }}" class="btn btn-outline-primary m-2">🔄 Mode Local</a>
+    <a href="{{ request.path }}?mode=remot" class="btn btn-outline-success m-2">🌐 Mode Remot</a>
+</div>      
+  {% endif %}
+  <div class="row">
+    {% for item in rss.entries %}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
+          {% if item.media_content %}
+            <img src="{{ item.media_content[0].url }}" class="card-img-top clickable-image" alt="{{ item.title }}">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></h5>
+            <p class="card-text">{{ item.description }}</p>
+            <p><strong>Categoria:</strong> {{ item.category }}</p>
+            <p><strong>Publicat:</strong> {{ item.published }}</p>
+            <p><strong>Actualitzat:</strong> {{ item.updated }}</p>
+            <p><strong>Autor:</strong> {{ item.author }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body d-flex justify-content-center align-items-center p-0">
+        <img id="modalImg" src="" class="w-100 h-100 object-fit-contain">
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/javascript/modocolor.js"></script>
+<script src="/static/javascript/zoom.js"></script>
+</body>
+</html>
