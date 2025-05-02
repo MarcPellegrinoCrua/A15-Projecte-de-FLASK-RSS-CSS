@@ -23,11 +23,12 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
 
 2. **Instal·la les dependències:**
 
-   pip install requeriments
+    pip install -r requirements.txt
 
 
 3. **Executa el servidor:**
-   flask run --debug
+
+    flask run --debug
 
 4. **Obre el navegador:**
 
@@ -36,14 +37,14 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
 
 ## 🌐 Modes de lectura RSS
 
-- **Mode local** (llegeix fitxers XML des de la carpeta `rss/`):
+- **Mode local** (llegeix fitxers XML des de la carpeta [`rss/`]):
 
-  http://127.0.0.1:5000/lavanguardia/economia Mode per defecte
+  http://127.0.0.1:5000/lavanguardia/[seccio]   Mode per defecte
 
 
 - **Mode remot** (llegeix l'RSS directament des d'internet):
 
-  http://127.0.0.1:5000/lavanguardia/economia?mode=remot Botó per accedir al mode remot incorporat al HTML
+  http://127.0.0.1:5000/lavanguardia/[seccio]?mode=remot  Botó per accedir al mode remot incorporat al HTML
 
 
 ## 📰 Seccions disponibles
