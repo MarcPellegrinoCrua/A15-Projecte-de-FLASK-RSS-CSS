@@ -8,14 +8,13 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
 
 1. **Crea un entorn virtual:**
    
-   - A Linux/Mac:
+- A Linux/Mac:
 
 ```bash
      python3 -m venv .venv
-     source .venv/bin/activate
+     source .venv/bin/activate 
 ```
-
-   - A Windows:
+- A Windows:
 
 ```bash
      python -m venv .venv
@@ -51,7 +50,7 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
   http://127.0.0.1:5000/lavanguardia/[seccio]?mode=remot   Botó per accedir al mode remot incorporat al HTML
 
 
-## 📰 Seccions disponibles
+## 📰 Seccions disponibles en mode local
 
 ### La Vanguardia
 - Portada (home)
