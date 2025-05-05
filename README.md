@@ -4,8 +4,6 @@
 
 Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El Punt Avui* des de fitxers XML locals o directament des del web (mode remot). Està feta amb **Flask**, **Feedparser** i **Bootstrap**.
 
-```bash
-
 ## 🔧 Instal·lació i execució
 
 1. **Crea un entorn virtual:**
@@ -44,7 +42,7 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
 
 - **Mode remot** (llegeix l'RSS directament des d'internet):
 
-  http://127.0.0.1:5000/lavanguardia/[seccio]?mode=remot  Botó per accedir al mode remot incorporat al HTML
+  http://127.0.0.1:5000/lavanguardia/[seccio]?mode=remot   Botó per accedir al mode remot incorporat al HTML
 
 
 ## 📰 Seccions disponibles
@@ -62,3 +60,5 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
 - Esports (esports)
 - Territori (territori)
 - Cultura (cultura)
+
+## Fet per Marc Pellegrino
