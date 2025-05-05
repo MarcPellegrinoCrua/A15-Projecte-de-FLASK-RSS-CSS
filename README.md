@@ -14,6 +14,7 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
      python3 -m venv .venv
      source .venv/bin/activate
 ```
+
    - A Windows:
 
 ```bash
