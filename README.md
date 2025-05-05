@@ -10,23 +10,28 @@ Aquesta aplicació et permet llegir notícies dels diaris *La Vanguardia* i *El 
    
    - A Linux/Mac:
 
+```bash
      python3 -m venv .venv
      source .venv/bin/activate
-
+```
    - A Windows:
 
+```bash
      python -m venv .venv
      .venv\Scripts\activate
-
+```
 
 2. **Instal·la les dependències:**
 
+```bash
     pip install -r requirements.txt
-
+```
 
 3. **Executa el servidor:**
 
+```bash
     flask run --debug
+```
 
 4. **Obre el navegador:**
 
